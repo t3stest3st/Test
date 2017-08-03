@@ -5,5 +5,6 @@ public class HelloClass {
         //2ez
         System.out.println("hay!");
         System.out.println("day!");
+        System.out.println("kay!");
     }
 }
