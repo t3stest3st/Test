@@ -6,5 +6,6 @@ public class HelloClass {
         System.out.println("hay!");
         System.out.println("day!");
         System.out.println("kay!");
+        System.out.println("nay!");
     }
 }
