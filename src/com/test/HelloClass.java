@@ -7,6 +7,6 @@ public class HelloClass {
         System.out.println("kay!");
         System.out.println("nay!");
         System.out.println("may!");
-        System.out.println("vay!");
+        System.out.println("Привет!");
     }
 }
