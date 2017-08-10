@@ -11,9 +11,9 @@ public class MyMathTest {
     @Rule
     public Timeout timeout = new Timeout(450);
 
-    @Test
-    public void add1() throws Exception {
-        assertEquals(4, MyMath.add(1,3));
+    @Test(expected = ArithmeticException.class)
+    public void div1() throws Exception {
+        assertEquals(20, MyMath.div(1,0));
     }
 
     @Test
