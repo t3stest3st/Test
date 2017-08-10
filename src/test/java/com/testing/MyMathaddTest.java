@@ -1,6 +1,5 @@
 package com.testing;
 
-import org.junit.Ignore;
 import org.junit.Rule;
 import org.junit.Test;
 import org.junit.rules.Timeout;
@@ -13,11 +12,11 @@ import java.util.Collection;
 import static org.junit.Assert.*;
 
 @RunWith(Parameterized.class)
-public class MyMathTest {
+public class MyMathaddTest {
 
     private int a, b, expResult;
 
-    public MyMathTest(int a, int b, int expResult) {
+    public MyMathaddTest(int a, int b, int expResult) {
         this.a = a;
         this.b = b;
         this.expResult = expResult;
@@ -30,12 +29,6 @@ public class MyMathTest {
 
     @Rule
     public Timeout timeout = new Timeout(450);
-
-    @Ignore
-    @Test(expected = ArithmeticException.class)
-    public void div() throws Exception {
-        assertEquals(expResult, MyMath.div(a,b));
-    }
 
     @Test
     public void add() throws Exception {
