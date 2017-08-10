@@ -1,35 +1,51 @@
 package com.testing;
 
+import org.junit.Ignore;
 import org.junit.Rule;
 import org.junit.Test;
 import org.junit.rules.Timeout;
+import org.junit.runner.RunWith;
+import org.junit.runners.Parameterized;
+
+import java.util.Arrays;
+import java.util.Collection;
 
 import static org.junit.Assert.*;
 
+@RunWith(Parameterized.class)
 public class MyMathTest {
+
+    private int a, b, expResult;
+
+    public MyMathTest(int a, int b, int expResult) {
+        this.a = a;
+        this.b = b;
+        this.expResult = expResult;
+    }
+
+    @Parameterized.Parameters
+    public static Collection numbers(){
+        return (Arrays.asList(new Object [][] {{1,2,3}, {6,2,8}, {7,4,11}}));
+    }
 
     @Rule
     public Timeout timeout = new Timeout(450);
 
+    @Ignore
     @Test(expected = ArithmeticException.class)
-    public void div1() throws Exception {
-        assertEquals(20, MyMath.div(1,0));
+    public void div() throws Exception {
+        assertEquals(expResult, MyMath.div(a,b));
+    }
+
+    @Test
+    public void add() throws Exception {
+        assertEquals(expResult, MyMath.add(a,b));
     }
 
     @Test
     public void add2() throws Exception {
-        assertEquals(5, MyMath.add(4,1));
-    }
-
-    @Test
-    public void add4() throws Exception {
-        assertEquals(7, MyMath.add(4,3));
-    }
-
-    @Test
-    public void add3() throws Exception {
         System.out.println("Hi!");
-        add4();
+        add();
     }
 
 }
