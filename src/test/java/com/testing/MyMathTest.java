@@ -16,9 +16,15 @@ public class MyMathTest {
         assertEquals(5, MyMath.add(2,3));
     }
 
-    @Test
+    @Test()
     public void add3() throws Exception {
         assertEquals(7, MyMath.add(4,3));
+    }
+
+    @Test
+    public void qwerty() throws Exception {
+        System.out.println("Hi!");
+        add3();
     }
 
 }
