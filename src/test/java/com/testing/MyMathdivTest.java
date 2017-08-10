@@ -24,13 +24,13 @@ public class MyMathdivTest {
 
     @Parameterized.Parameters
     public static Collection numbers(){
-        return (Arrays.asList(new Object [][] {{0,0,1}, {4,2,2}, {7,4,1}}));
+        return (Arrays.asList(new Object [][] {{8,8,1}, {4,2,2}, {7,4,1}}));
     }
 
-    @Rule
-    public Timeout timeout = new Timeout(450);
+//    @Rule
+//    public Timeout timeout = new Timeout(10);
 
-    @Test(expected = ArithmeticException.class)
+    @Test//(expected = ArithmeticException.class)
     public void div() throws Exception {
         assertEquals(expResult, MyMath.div(a,b));
     }

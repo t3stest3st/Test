@@ -27,8 +27,8 @@ public class MyMathaddTest {
         return (Arrays.asList(new Object [][] {{1,2,3}, {6,2,8}, {7,4,11}}));
     }
 
-    @Rule
-    public Timeout timeout = new Timeout(450);
+//    @Rule
+//    public Timeout timeout = new Timeout(200);
 
     @Test
     public void add() throws Exception {
