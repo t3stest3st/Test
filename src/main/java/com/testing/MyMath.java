@@ -1,7 +1,8 @@
 package com.testing;
 
-public class MyMath {
-    public static int add (int a, int b) {
+class MyMath {
+    static int add (int a, int b) throws InterruptedException {
+        Thread.sleep(100);
         return a+b;
     }
 }
