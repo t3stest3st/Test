@@ -5,6 +5,4 @@ import org.junit.runners.Suite;
 
 @RunWith(Suite.class)
 @Suite.SuiteClasses({MyMathaddTest.class, MyMathdivTest.class})
-public class MyMathSuiteTest {
-
-}
+public class MyMathSuiteTest {}
