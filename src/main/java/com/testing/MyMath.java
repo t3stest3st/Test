@@ -2,8 +2,12 @@ package com.testing;
 
 class MyMath {
 
-    static int add (int a, int b) throws InterruptedException {
-        Thread.sleep(100);
+    static int add (int a, int b) {
+        try {
+            Thread.sleep(100);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
         return a+b;
     }
 
