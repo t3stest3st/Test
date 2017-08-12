@@ -13,7 +13,6 @@ class MyMath {
      * @return сумма аргументов
      */
 
-
     static int add (int a, int b) {
         try {
             Thread.sleep(100);
